@@ -18,8 +18,37 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+body nav {
+  margin:1em 0 ;
+  height:120px;
+  background-color:#4056A1 ;
+  color:#FFFFFF ;
+  width:100%;
+  display: flex;
+}
+nav span {
+  display: inline-block;
+  font-family: 'Bungee', cursive, sans-serif;
+  padding-left: 1.5em;
+  font-size: 1.5em;
+  margin-top: 60px;
+}
+.write p{
+  position:absolute;
+  right:0px;
+  top:48px;
+  margin-right:1.5em;
+}
+.write i{
+  position: absolute;
+  right:6em;
+  top:100px;
+  font-size: .9em;
+}
+
