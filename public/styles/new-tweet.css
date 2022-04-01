@@ -1,0 +1,122 @@
+section.new-tweet {
+  padding: 0 2%;
+  margin: 30px 0;
+}
+
+
+.new-tweet form label {
+  width: 100%;
+  font-weight: 600;
+}
+
+.new-tweet form textarea {
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  resize: none;
+  border: none;
+  border-bottom: 3px solid #545149;
+}
+
+.new-tweet div {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  border-color: #4056A1;
+  color: white;
+  font-weight: 700;
+  font-family: 'Bungee';
+}
+
+.new-tweet output {
+
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Bungee';
+}
+
+.new-tweet output.error {
+  color: red;
+}
+
+article.tweet {
+  border: 3px solid #545149;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px #abb2c7;
+}
+
+article .tweet-user {
+  padding: 20px;
+  align-items: center;
+}
+
+article .tweet-user .name,
+article .tweet-user .ip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article .name {
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  color: #545149;
+}
+
+article .name i {
+  font-size: 3rem;
+  padding-right: 0.725rem;
+}
+
+article .ip {
+  font-weight: 800;
+  color: rgb(183, 180, 180);
+}
+
+article .message {
+  font-weight: 800;
+  border-bottom: 3px solid #545149;
+  padding: 0 20px 20px 20px;
+}
+
+article .icon {
+  color: #4056A1;
+}
+
+article .icon i {
+  display: inline-block;
+  padding: 0 0.25rem;
+}
+
+article .icon i:hover {
+  cursor: pointer;
+  color: #a97c21;
+}
+
+article .icon sup {
+  font-family: "Bungee";
+}
+
+article .flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+article .tweet-footer {
+  font-size: 0.9rem;
+  padding: 5px 20px;
+}
+
+p {
+  margin: 0;
+}
