@@ -18,3 +18,8 @@ This repository is the starter code for the project: Students will fork and clon
 -  "chance": "^1.0.2",
 -  "express": "^4.13.4",
 -  "md5": "^2.1.0"
+
+## Screenshot 
+![tweet-box-1024](https://user-images.githubusercontent.com/90575401/161449808-e4c0e817-18bc-4db6-b8d4-4a3b1f2a454d.png)
+![tweet-box-140](https://user-images.githubusercontent.com/90575401/161449824-446597d5-ef20-46c0-856b-ef22678e680e.png)
+![tweet-box-hi](https://user-images.githubusercontent.com/90575401/161449835-eacf8782-d9b4-483c-a445-5b4af3087af4.png)
