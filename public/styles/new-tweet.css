@@ -87,6 +87,7 @@ article .message {
   font-weight: 800;
   border-bottom: 3px solid #545149;
   padding: 0 20px 20px 20px;
+  overflow-wrap: break-word;
 }
 
 article .icon {
@@ -119,4 +120,25 @@ article .tweet-footer {
 
 p {
   margin: 0;
+}
+
+.new-tweet .alert.error {
+  color: rgb(224, 17, 17);
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  max-height: 0;
+  padding: 0 0.5rem;
+  overflow: hidden;
+  transition: all 0.25s ease-in;
+}
+
+.new-tweet .alert.error.open {
+  border: 2px solid rgb(224, 17, 17);
+  max-height: 100px;
+  padding: 1rem 0.5rem;
+  transition: all 0.25s ease-in;
+}
+
+.new-tweet .alert.error i {
+  padding-right: 0.5rem;
 }

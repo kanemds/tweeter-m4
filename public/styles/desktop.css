@@ -1,0 +1,27 @@
+@media screen and (min-width: 1024px) {
+
+  body {
+    display: flex;
+  }
+
+  header.header,
+  main.container {
+    margin-top: 250px;
+  }
+
+  .header {
+    max-width: 600px;
+    width: 35%;
+    margin: 0 5%;
+  }
+
+  .container {
+    width: 55%;
+  }
+
+  .header img {
+    width: 240px;
+    padding-top: 50px;
+  }
+
+}

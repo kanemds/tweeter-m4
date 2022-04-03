@@ -3,30 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+
 
 $(document).ready(function() {
 
@@ -52,7 +29,7 @@ $(document).ready(function() {
   </div>
   <footer class="tweet-footer flex">
     <div class="time">
-      <p>${tweet.created_at}</p>
+      <p>${timeago.format(tweet.created_at)}</p>
     </div>
     <div class="icon">
       <i class="fa-solid fa-flag"></i>
@@ -61,10 +38,49 @@ $(document).ready(function() {
     </div>
   </footer>
 </article>`;
-
   };
-  renderTweets(data);
+  //line 55 implement timeago, first need to add src or npm install
+
+  // (form).submit see https://api.jquery.com/submit/
+  $('form').submit(function(event) {
+    event.preventDefault();
+    let val = $(this).serialize();
+    let content = $('#tweet-text').val();
+    // see documentaion https://api.jquery.com/serialize/
+    if (content.length === 0) {
+      $('.alert.error.no-content').addClass('open');
+      return false;
+    }
+    if (content.length > 140) {
+      $('.alert.error.maximum').addClass('open');
+      return false;
+    }
+    $('.alert.error.no-content').removeClass('open');
+    $('.alert.error.maximum').removeClass('open');
+    $.post("/tweets", val)
+      .done(function(data) {
+        $.get('/tweets', function(data) {
+          const latest = data[data.length - 1];
+          const latestTweet = createTweetElement(latest);
+          $('.tweets').prepend(latestTweet);
+          $('form').trigger("reset");
+          $('output').text(140);
+        });
+      });
+  });
+
+  
+  const loadTweets = function() {
+    $.get('/tweets', function(data) {
+      data.reverse();
+      renderTweets(data);
+    });
+  };
+  loadTweets();
+  
 });
+
+
 
 
 
